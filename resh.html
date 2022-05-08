@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>web-система МЭТЧИНГ</title>
+ </head>
+ 
+
+ <body bgcolor="#c0c0c0">
+ <h1><p style="text-align: center">Решение -  расчет функций полезности</p></h1>
+ <h2>
+ <A href=opros.html> <p >Проведение опроса</p></A>
+  <A href=koef.html><p >Расчет коэффициентов предпочтений</p></A>
+  <A href=resh.html><p >Решение -  расчет функций полезности</p></A>
+  <A href=sp.html><p >Спрос и предложение - расчет равновесной цены и  объема товара</p></A>
+  <p >Решение -  расчет функций полезности</p>
+  <p >Исходные данные</p>
+  <p>Пусть имеется 4 товара одной категории,  для которой определены критерии и по методу парных сравнений рассчитаны коэффициенты пред-почтений:
+	<ul>
+ <li>цена – 36.5%, V1=0.365;</li>
+<li>производитель – 8.37%, V2=0.0837;</li>
+	<li>срок гарантии – 18.76%, V3=0,1876;</li>
+	<li>дата производства – 4.91%, V4=0,0491;</li>
+	<li>вес – 1.73%, V5=0,0173;</li>
+	<li>габариты – 29.73%, V6=0,2973.</li>
+</ul>
+
+Оценки альтернатив по критериям
+  <table border="1" width="70%" cellpadding="5">
+   <tr>
+    <th>Альтернатива</th>
+    <th>Цена(ден. ед.)</th>
+	<th>Производитель (оценка)</th>
+	<th>Срок гаран-тии</th>
+	<th>Дата произв.</th>
+	<th>Вес</th>
+	<th>Габариты</th>
+   </tr>
+   <tr>
+    <td>Товар 1</td>
+    <td>10</td>
+	<td>0,75</td>
+	<td>1</td>
+	<td>0</td>
+	<td>10</td>
+	<td>1</td>
+  </tr>
+  <tr>
+    <td>Товар 2</td>
+    <td>12</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0,5</td>
+	<td>11	</td>
+	<td>1,5	</td>
+	<td></td>
+  </tr>
+  <tr>
+    <td>Товар 3</td>
+    <td>8</td>
+	<td>0,5</td>
+	<td>1</td>
+	<td>1</td>
+	<td>9</td>
+	<td>1</td>
+  </tr>
+  <tr>
+    <td>Товар 4</td>
+    <td>11</td>
+	<td>1</td>
+	<td>0,5</td>
+	<td>0</td>
+	<td>5</td>
+	<td>1,2</td>
+  </tr>
+ </table>
+ <p><input type="button" value="Выполнить расчет" id='btn'></p>
+   
+   <script>
+var btn = document.getElementById('btn')
+
+btn.addEventListener('click', function(){
+   
+   const num2 = [["Товар1", 4.3707, 2], ["Товар2", 5.0408, 4],["Товар3", 3.6516, 1], ["Товар4", 4.6358, 3]];
+    document.write('<h1><p> Функции полезности </p></h1>');
+	document.write('<table width="100%" style="font-size : 24px; font-family : Arial;">');
+            document.write("<tr><td>Альтернатива</td><td>Значение функции</td><td>Номер для покупателя</td></tr>");
+            for (var i = 0; i < 4; i++) {
+                document.write("<tr><td>" + num2[i][0] + "</td><td>" + num2[i][1] + "</td><td>" + num2[i][2] + "</td></tr>");
+            } 
+			
+            document.write('</table>')
+   
+});
+</script>
+ </body
+ </html>

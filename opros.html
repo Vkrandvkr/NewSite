@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>web-система МЭТЧИНГ</title>
+  <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+ </head>
+ 
+
+ <body bgcolor="#c0c0c0" id="body">
+ <h1><p style="text-align: center">Проведение опроса</p></h1>
+ <h2>
+ <A href=opros.html> <p >Проведение опроса</p></A>
+  <A href=koef.html><p >Расчет коэффициентов предпочтений</p></A>
+  <A href=resh.html><p >Решение -  расчет функций полезности</p></A>
+  <A href=sp.html><p >Спрос и предложение - расчет равновесной цены и  объема товара</p></A>
+  <div id="d1" >
+  <br> Благодарим вас за участие в опросе
+  <br> При совершении покупки на нашей площадке 
+  <br> вы получите скидку 5%
+  <br>
+  <form name="test" method="post" action="input1.php">
+  <p><b>Ваше имя:</b><br>
+   <input type="text" size="40">
+  </p>
+  <p><b>Категория товара:</b><br>
+  <p><select name="select" size="3" multiple>
+    <option selected value="s1">Нагревательные приборы</option>
+    <option value="s2">Холодильники и морозильники</option>
+    <option value="s3">Уборочные машины</option>
+    <option value="s4">Швейные машины</option>
+   </select>
+    <p><input type="submit" value="Отправить">
+   
+ </form>
+            <form  >
+                <h4>Выберите более важные для вас характеристики товара </h4>
+                <p>
+                 1   1 Цена или 2 Производитель   <input type="number" size="2" id="p1" min="1" max="2" value="1">
+                    
+                </p>
+				<p>
+                 2   1 Цена или 2 Срок гарантии   <input type="number" size="2" id="p2" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 3   1 Цена или 2 Дата производства   <input type="number" size="2" id="p3" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 4   1 Цена или 2 Вес   <input type="number" size="2" id="p4" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 5  1 Цена или 2 Габариты   <input type="number" size="2" id="p5" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 6   1 Производитель  или 2 Срок гарантии   <input type="number" size="2" id="p6" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 7   1 Производитель или 2 Дата производства   <input type="number" size="2" id="p7" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 8   1 Производитель или 2 Вес   <input type="number" size="2" id="p8" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 9 1 Производитель 2 Габариты   <input type="number" size="2" id="p9" min="1" max="2" value="1"> 
+				</p>
+               
+				<p>
+                 10   1 Срок гарантии или 2 Дата производства   <input type="number" size="2" id="p10" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 11  1 Срок гарантии или 2 Вес   <input type="number" size="2" id="p11" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 12 1 Срок гарантии 2 Габариты   <input type="number" size="2" id="p12" min="1" max="2" value="1"> 
+				</p>
+				
+				<p>
+                 13  1 Дата производства  или 2 Вес   <input type="number" size="2" id="p13" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 14 1 Дата производства  2 Габариты   <input type="number" size="2" id="p14" min="1" max="2" value="1"> 
+				</p>
+				<p>
+                 15 1 Вес  2 Габариты   <input type="number" size="2" id="p15" min="1" max="2" value="1"> 
+				</p>
+                <p>
+				<p><input type="submit" value="Отправить">
+   </p>
+			</form>
+  </div> 
+<form>
+ <h3>
+   <p><input type="button" value=" Вывести матрицу парных сравнений " id='btn'></p>
+ </h3>
+  
+<script>
+var btn = document.getElementById('btn')
+
+btn.addEventListener('click', function(){
+   
+   const num2 = [[0, 1, 0, 1,1,1], [0, 0, 1, 1, 1,0],[1, 0, 0, 0, 1,0], [0, 0, 1, 0, 0,0],[0, 0, 0, 1, 0,0], [0,1, 1, 1, 1,0] ];
+    document.write('<table style="font-size : 24px; font-family : Arial;">');
+            document.write("<tr><td>Цена</td><td>Производитель</td><td>Срок гарантии</td><td>Дата производства</td><td>Вес</td><td>Габариты</td></tr>");
+            for (var i = 0; i < 6; i++) {
+                document.write("<tr><td>" + num2[i][0] + "</td><td>" + num2[i][1] + "</td><td>" + num2[i][2] + "</td><td>" + num2[i][3] + "</td><td>" + num2[i][4] + "</td><td>" + num2[i][5] + "</td></tr>");
+            } V
+            document.write('</table>')
+   
+});
+
+</script>  
+</form>
+ </body>
+ </html>

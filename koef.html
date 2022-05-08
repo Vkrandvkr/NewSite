@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>web-система МЭТЧИНГ</title>
+ </head>
+ 
+
+ <body bgcolor="#c0c0c0">
+ <h1><p style="text-align: center">Расчет коэффициентов предпочтений</p></h1>
+  
+ 
+ <h2>
+  <A href=opros.html> <p >Проведение опроса</p></A>
+  <A href=koef.html><p >Расчет коэффициентов предпочтений</p></A>
+  <A href=resh.html><p >Решение -  расчет функций полезности</p></A>
+  <A href=sp.html><p >Спрос и предложение - расчет равновесной цены и  объема товара</p></A>
+  <h1><p style="text-align: center">Исходные данные для расчета коэффициентов</p></h1>
+   <p><input type="button" value="Рассчитать коэффициенты" id='btn'></p>
+   
+   <script>
+var btn = document.getElementById('btn')
+
+btn.addEventListener('click', function(){
+   
+   const num2 = [[0, 3, 0, 5,2,3], [0, 0, 1, 3, 3,0],[2, 0, 0, 0, 4,0], [0, 0, 1, 0, 0,0],[0, 0, 0, 2, 0,0], [0,4, 2, 3, 1,0] ];
+    document.write('<h1><p> Результат расчета коэффициентов</p></h1>');
+	document.write('<table width="100%" style="font-size : 24px; font-family : Arial;">');
+            document.write("<tr><td>Цена</td><td>Производитель</td><td>Срок гарантии</td><td>Дата производства</td><td>Вес</td><td>Габариты</td></tr>");
+            for (var i = 0; i < 6; i++) {
+                document.write("<tr><td>" + num2[i][0] + "</td><td>" + num2[i][1] + "</td><td>" + num2[i][2] + "</td><td>" + num2[i][3] + "</td><td>" + num2[i][4] + "</td><td>" + num2[i][5] + "</td></tr>");
+            } 
+			document.write("<tr><td></td><td>Коэффициенты</td><td></td><td></td><td></td><td></td></tr>");
+			document.write("<tr><td>0.3650</td><td>0.0837</td><td>0.1876</td><td>0.0491</td><td>0.0173</td><td>0.2973</td></tr>");
+            document.write('</table>')
+   
+});
+</script>    
+  <h3><p> В опросе участвовал Семенов А.В. 
+  <p> Дата проведения опроса 05.03.2022
+ <p> Результат опроса</h3>
+  <table border="1" width="50%" cellpadding="5">
+   <tr>
+    <th>Цена</th>
+    <th>Производитель</th>
+	<th>Срок гарантии</th>
+	<th>Дата производства</th>
+	<th>Вес</th>
+	<th>Габариты</th>
+   </tr>
+   <tr>
+    <td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td>
+ </tr>
+ <tr>
+    <td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td>
+  </tr>
+ </table>
+ <p>
+ <h3><p> В опросе участвовал Галкина В. 
+  <p> Дата проведения опроса 05.03.2022
+ <p> Результат опроса</h3>
+  <table border="1" width="50%" cellpadding="5">
+   <tr>
+    <th>Цена</th>
+    <th>Производитель</th>
+	<th>Срок гарантии</th>
+	<th>Дата производства</th>
+	<th>Вес</th>
+	<th>Габариты</th>
+   </tr>
+   <tr>
+    <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td>
+ </tr>
+ <tr>
+    <td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td>
+  </tr>
+ </table>
+ </body>
+ </html>

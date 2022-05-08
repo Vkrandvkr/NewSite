@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>web-система МЭТЧИНГ</title>
+ </head>
+ 
+
+ <body bgcolor="#c0c0c0">
+ <h1><p style="text-align: center">Спрос и предложение - расчет равновесных цены и  объема товара</p></h1>
+ <h2>
+ <A href=opros.html> <p >Проведение опроса</p></A>
+  <A href=koef.html><p >Расчет коэффициентов предпочтений</p></A>
+  <A href=resh.html><p >Решение -  расчет функций полезности</p></A>
+  <A href=sp.html><p >Спрос и предложение - расчет равновесной цены и  объема товара</p></A>
+   <h2>
+  Данные о продажах товара
+  <table border="1" width="70%" cellpadding="5">
+   <tr>
+    <th>Номер периода</th>
+    <th>Цена(ден. ед.)</th>
+	<th>Кол. проданного товара(тыс.шт.)</th>
+   </tr>
+   <tr>
+    <td>1</td>
+    <td>20</td>
+	<td>1000</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>30</td>
+	<td>800</td>
+  </tr>
+ </table>
+  Данные о предложении продавца 
+  <table border="1" width="70%" cellpadding="5">
+   <tr>
+    <th>Номер периода</th>
+    <th>Цена(ден. ед.)</th>
+	<th>Предложение товара(тыс.шт.)</th>
+   </tr>
+   <tr>
+    <td>1</td>
+    <td>30</td>
+	<td>1000</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>40</td>
+	<td>1200</td>
+  </tr>
+ </table>
+  <p><input type="button" value="Выполнить расчет" id='btn'></p>
+   
+   <script>
+var btn = document.getElementById('btn')
+
+btn.addEventListener('click', function(){
+ 
+  
+    document.write('<h1><p>Функция спроса</p></h1>');
+	document.write('<h1><p> a=-20  b=1400</p></h1>');
+	document.write('<h1><p> Функция спроса Qd=-20p + 1400</p></h1>');
+	document.write('<h1><p>Функция предложения</p></h1>');
+	document.write('<h1><p> a=20  b=400</p></h1>');
+	document.write('<h1><p> Функция предложения Qs=20p + 400</p></h1>');
+	document.write('<h1><p>Равновесная цена p*=25 ден.ед.</p></h1>');
+	document.write('<h1><p> Равновесный объем  Qs*=900 тыс.шт.</p></h1>');
+	
+   
+})
+</script> 
+   </h2>
+ </body>
+ </html>
